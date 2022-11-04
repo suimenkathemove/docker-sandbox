@@ -1,0 +1,21 @@
+version: '3.9'
+services:
+  db:
+    build:
+      # https://docs.docker.com/compose/compose-file/compose-file-v3/#dockerfile
+      context: .
+      dockerfile: Dockerfile
+      # https://docs.docker.com/compose/compose-file/compose-file-v3/#target
+      target: database
+    ports:
+      # https://docs.docker.com/compose/compose-file/compose-file-v3/#ports
+      - "5432:5432"
+    volumes:
+      # https://hub.docker.com/_/postgres
+      - pgdata:/var/lib/postgresql/data
+    environment:
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: todos
+    restart: always
+volumes:
+  pgdata:
