@@ -4,7 +4,7 @@ services:
     build:
       # https://docs.docker.com/compose/compose-file/compose-file-v3/#dockerfile
       context: .
-      dockerfile: Dockerfile
+      # dockerfile: Dockerfile
       # https://docs.docker.com/compose/compose-file/compose-file-v3/#target
       target: database
     ports:
