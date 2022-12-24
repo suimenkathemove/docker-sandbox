@@ -5,7 +5,7 @@ DEV_PATH="$HOME/development"
 SCOPE_PATH="$DEV_PATH/suimenkathemove"
 
 # EDIT THIS
-PROJECT_NAME="docker_examples"
+PROJECT_NAME="docker-sandbox"
 
 cd "$SCOPE_PATH/$PROJECT_NAME" || exit
 
