@@ -1,4 +1,4 @@
-version: '3.9'
+version: "3.9"
 services:
   db:
     build:
@@ -15,7 +15,7 @@ services:
       - pgdata:/var/lib/postgresql/data
     environment:
       POSTGRES_PASSWORD: password
-      POSTGRES_DB: todos
+      POSTGRES_DB: postgres_sandbox
     restart: always
 volumes:
   pgdata:
